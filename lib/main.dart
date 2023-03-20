@@ -40,6 +40,8 @@ class _MyDrawerState extends State<MyDrawer> with TickerProviderStateMixin {
   late AnimationController _xControllerForDrawer;
   late Animation<double> _yRotationAnimationForDrawer;
 
+  bool isOpen = false;
+
   @override
   void initState() {
     super.initState();
@@ -168,6 +170,13 @@ class HomePage extends StatelessWidget {
       ),
       child: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.menu,
+              color: Colors.white,
+            ),
+          ),
           title: const Text('Home Page'),
         ),
         body: Container(
